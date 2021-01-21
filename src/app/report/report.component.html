@@ -1,0 +1,24 @@
+<div class="maindiv">
+  <div class="showSucessWrapper" *ngIf="showsuccess">
+    <div *ngIf="showsuccess" class="alert alert-success showsuccess" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      Report Success
+    </div>
+  </div>
+  <div class="showSucessWrapper" *ngIf="showFail">
+    <div class="alert alert-danger showFail" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      Error in Fetching Report
+    </div>
+  </div>
+
+  <div class="logout" *ngIf="showLogoutButton"> <button type="button" class="btn btn-info"
+      (click)="logout()">Logout</button> </div>
+
+  <div #reportContainer style=" width: 100%;" [ngStyle]="{ 'height': (screenHeight-150)+ 'px' }"></div>
+
+</div>
