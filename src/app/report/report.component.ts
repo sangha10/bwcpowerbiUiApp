@@ -126,6 +126,7 @@ export class ReportComponent implements OnInit {
     // Report.on will add an event handler which prints to Log window.
     this.report.on("loaded", () => {
       this.showsuccess = true;
+      this.showLogoutButton = true
       console.log("Loaded");
       //this.spinner.hide();
     });
@@ -143,6 +144,6 @@ export class ReportComponent implements OnInit {
     this.showLogoutButton = false
     this.showsuccess = false;
     this.showFail = false;
-    this.router.navigate(['/home']);
+    this.router.navigate(['/report']);
   }
 }
